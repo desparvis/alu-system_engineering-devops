@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# This bash script rsa pairs
-ssh-keygen -t rsa -b 4096 -m PEM -f school -N "betty"
+# Generates an RSA key pair with specified properties
+
+ssh-keygen -t rsa -b 4096 -f school -N "betty"
