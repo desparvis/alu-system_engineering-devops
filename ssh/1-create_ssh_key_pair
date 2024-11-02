@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # experimenting
-ssh -i ~/.ssh/school  ubuntu@52.91.59.143
-ssh-keygen -b 4096 -t rsa -f school -N "betty"
+ssh -i ~/.ssh/school ubuntu@54.144.93.26 "ssh-keygen -b 4096 -t rsa -f ~/school -N 'betty'"
