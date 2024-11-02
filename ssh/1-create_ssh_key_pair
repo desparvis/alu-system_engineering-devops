@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script generates a 4096-bit RSA key pair named 'school' with a passphrase 'betty'
-
-ssh-keygen -t rsa -b 4096 -f school -N "betty"
+# experimenting
+ssh -i ~/.ssh/school  ubuntu@52.91.59.143
+ssh-keygen -b 4096 -t rsa -f school -N "betty"
