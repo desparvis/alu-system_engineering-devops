@@ -1,2 +1,2 @@
 # My SSH learning journey
-My learning journey on ssh
+My ssh learning journey :)
