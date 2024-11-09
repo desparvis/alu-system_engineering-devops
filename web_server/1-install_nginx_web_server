@@ -6,7 +6,7 @@ sudo apt-get update -y
 sudo apt-get install -y nginx
 
 # Configure Nginx to display "Holberton School" on the home page
-echo "Holberton School for the win!" | sudo tee /var/www/html/index.html > /dev/null
+echo "Holberton School" | sudo tee /var/www/html/index.html > /dev/null
 
 # Restart Nginx without using systemctl (use the service command instead)
 sudo service nginx restart
