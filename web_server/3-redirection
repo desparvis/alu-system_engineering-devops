@@ -1,4 +1,4 @@
-#1/usr/bin/env bash
+#!/usr/bin/env bash
 #installing nginx on certain configurations
 
 sudo apt-get update 
