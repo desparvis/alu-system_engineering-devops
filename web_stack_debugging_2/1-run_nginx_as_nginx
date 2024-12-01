@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# changes user to nginx
+# nginx must be listening on port 80
+if ! command -v nginx &>/dev/null; then
+  echo "Nginx is not installed. Exiting."
+  exit 1
+fi
+
+NGINX_CONF="/etc/nginx/nginx.conf"
+
+sed -i 's/^user .*/user nginx;/' "$NGINX_CONF"
+sed -i 's/listen 80;/listen 8080;/' /etc/nginx/sites-available/default
+
+nginx -t && nginx -s reload
+
+if ps aux | grep nginx | grep -qv root; then
+  echo "Nginx is successfully running as the nginx user on port 8080."
+else
+  echo "Failed to configure Nginx to run as the nginx user. Please check."
+fi
