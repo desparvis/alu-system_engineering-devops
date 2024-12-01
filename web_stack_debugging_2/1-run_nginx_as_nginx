@@ -13,7 +13,7 @@ sed -i 's/listen 80;/listen 8080;/' /etc/nginx/sites-available/default
 
 nginx -t && nginx -s reload
 
-if ps aux | grep nginx | grep -qv root; then
+if pgrep -u nginx nginx > /dev/null; then
   echo "Nginx is successfully running as the nginx user on port 8080."
 else
   echo "Failed to configure Nginx to run as the nginx user. Please check."
